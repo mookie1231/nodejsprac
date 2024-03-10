@@ -4,30 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css.styl">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Let's Get In Touch!</h1>
-
-  <form id="contact-form">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-
-  <h2>Alternatively, reach us here:</h2>
-  <ul>
-    <li>Email: <a href="mailto:youremail@yourdomain.com">youremail@yourdomain.com</a></li>
-    <li>Phone: (555) 555-5555</li>
-  </ul>
-
+    <div class="contact-form">
+        <h2>Contact Us Now</h2>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     
 </body>
 </html>
