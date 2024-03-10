@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;  /* Set a nice font */
+    margin: 50px;  /* Add some margin around the content */
+}
+
+div {
+    text-align: center;  /* Center the text in the divs */
+    padding: 20px;
+    border-radius: 5px;  /* Add some rounded corners */
+    background-color: #f2f2f2;  /* Light gray background */
+    margin-bottom: 15px;  /* Add space between divs */
+}
+
+div:first-child {  /* Style the first div differently */
+    background-color: #3498db;  /* Blue background */
+    color: white;  /* White text */
+}
+
+a {
+    color: #3498db;  /* Set the link color */
+    text-decoration: none;  /* Remove underline from link */
+    font-weight: bold;  /* Make the link text bold */
+}
+
+a:hover {  /* Add hover effect to the link */
+    color: #2980b9;  /* Slightly darker blue on hover */
+}
