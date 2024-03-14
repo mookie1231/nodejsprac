@@ -7,17 +7,16 @@ const port = 3000;
 app.use(express.static('public'));
 
 app.get("/", (req,res) => {
-    
     res.sendFile(path.join(__dirname,'public', 'about.html'))
 })
 
 app.get("/about", (req,res) => {
-    res.send(" you found me")
 
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
 })
 
 app.get("/contact", (req, res) => {
-    res.send("Part three of this madness")
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
 })
 
 app.listen(port, () => {
