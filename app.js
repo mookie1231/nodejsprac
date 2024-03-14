@@ -1,31 +1,28 @@
-const http = require('http');
-const fs = require('fs'); 
-
-const server = http.createServer((req, res) => {
-    fs.readFile('contact.html', (err, data) => {  
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end(data);
-    });
-
-    
-});
-
-server.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
-});
-
-
 
 const express = require("express")
 const app = express()
+const path = require("path")
 const port = 3000;
 
+app.use(express.static('public'));
+
 app.get("/", (req,res) => {
-    res.send("Hello World")
+    
+    res.sendFile(path.join(__dirname,'public', 'about.html'))
 })
 
+app.get("/about", (req,res) => {
+    res.send(" you found me")
 
+})
 
+app.get("/contact", (req, res) => {
+    res.send("Part three of this madness")
+})
+
+app.listen(port, () => {
+    console.log(`We are always listening in on ${port}`)
+})
 
 
 
